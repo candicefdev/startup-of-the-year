@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Startup</title>
+
+    <!-- Required meta tags.
+    this allows us to add new info to our html page.
+    utf-8 means we are using this form of encoding
+    to write text. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- cdn = content delivery network -->
+
+    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Your own stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+ 
+  <body>
+   <!-- The first thing we want to do is create
+  a class of container inside the body.
+
+    We walso want to use flexbox in order to get this content to the middle instead of at the top of the page
+    so we need to use d-flex in order to first ENABLE the flexbox. The we can use flexbox behaviors. So now we
+    can use align-items center now that we found on the website. At this point it's still not working. Why?
+    if we debug using developer tools on the website, w ehave the container and then the body. Everything is in the container. We can see that the container is NOT the full page it is only the top part. therefore it is not centering on the page but the container itself. It is not covering the full page. So just like we did in 
+    body and lok at the styles and see that we had height 
+    at 100%. All we need to do is tell the container, hey i
+    want you to span the entire height of the page. In bootstrap we can simply do that by saying h-100
+   -->
+    <div class="container d-flex align-items-center h-100">
+      <!-- next we want the h1,hr and button to just be
+      in a row.that's in the center of the page
+      so we will wrap them in a div and give
+      them a class of row  -->
+      <div class="row">
+        <!-- next let's divide up each item,
+        h1,hr adn button into different sections -->
+
+        <!-- text-center will center the text -->
+        <header class="text-center col-12">
+        <h1 class="text-uppercase"><strong> The biggest startup event of the year</strong></h1>
+        </header>
+
+        <!-- we want to have some space between the
+        writing and the button so we want another section in between these two that will help buffer them from each other. we'll need to write
+        the styles for this class btw   -->
+        <div class="buffer col-12"> </div>
+
+        <!-- This section element will also have the class
+        text-center but in order for it to take up the page
+        we will need to use col-12 for both header
+        and section.-->
+      <section class="text-center col-12">
+    <!-- hr is jsut a horizontal line. -->
+        <hr>
+        <!-- our link for our button that goes to our form -->
+        <a href="https://mailchi.mp/3650e9b5ee4f/cfclients"> 
+        <button class="btn btn-primary btn-xl">Find out more</button>
+          </a>
+        </section> 
+      </div>
+    </div>
+  </body>
+</html>
